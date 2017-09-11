@@ -1,6 +1,7 @@
 package homework;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class TestCreature extends Object
 {
@@ -14,35 +15,19 @@ public class TestCreature extends Object
 		Scanner scan = new Scanner(System.in);
 		Thing[] things = new Thing[THING_COUNT];
 		Creature[] creatures = new Creature[CREATURE_COUNT];
-		int selection;
+		int selection, r;
 		String input, name;
 		
-		for (int i=0; i < THING_COUNT-4; i++)
+		for (int i=0; i < CREATURE_COUNT; i++)
 		{
-			System.out.print("Create a thing by entering a name for said thing: ");
-			input = scan.nextLine();
-			Thing thing = new Thing(input);
-			things[i] = thing;
-		}
-		
-		for (int j=6; j < THING_COUNT; j++)
-		{
-			System.out.print("Create a Tiger by entering a name for said tiger: ");
-			name = scan.nextLine();
-			Tiger tigerThing = new Tiger(name);
-			things[j] = tigerThing;
-		}
-		
-		for (int n=0; n < CREATURE_COUNT; n++)
-		{
-			System.out.println("\nCreature Creation Menu.");
+			System.out.println("Creature Creation Menu.");
 			System.out.println("==================================");
 			System.out.println("Ant: 1\nBat: 2\nFly: 3\nTiger: 4");
 			System.out.println("==================================");
 			System.out.print("Select the type of creature you would like to create: ");
 			selection = Integer.parseInt(scan.nextLine());
 			
-			System.out.print("\nGreat Choice! Now give the ");
+			System.out.print("Great Choice! Now give the ");
 			
 			switch(selection)
 			{
@@ -51,7 +36,8 @@ public class TestCreature extends Object
 					System.out.print("Ant a name!: ");
 					name = scan.nextLine();
 					Ant ant = new Ant(name);
-					creatures[n] = ant;
+					creatures[i] = ant;
+					System.out.println("");
 				}
 				break;
 				
@@ -60,7 +46,8 @@ public class TestCreature extends Object
 					System.out.print("Bat a name!: ");
 					name = scan.nextLine();
 					Bat bat = new Bat(name);
-					creatures[n] = bat;
+					creatures[i] = bat;
+					System.out.println("");
 				}
 				break;
 				
@@ -69,7 +56,8 @@ public class TestCreature extends Object
 					System.out.print("Fly a name!: ");
 					name = scan.nextLine();
 					Fly fly = new Fly(name);
-					creatures[n] = fly;
+					creatures[i] = fly;
+					System.out.println("");
 				}
 				break;
 				
@@ -78,13 +66,27 @@ public class TestCreature extends Object
 					System.out.print("Tiger a name!: ");
 					name = scan.nextLine();
 					Tiger tiger = new Tiger(name);
-					creatures[n] = tiger;
+					creatures[i] = tiger;
+					System.out.println("");
 				}
 				break;
 			}
 		}
 		
+		for (int j=0; j < THING_COUNT-6; j++)
+		{
+			System.out.print("Create a thing by entering a name for said thing: ");
+			input = scan.nextLine();
+			Thing thing = new Thing(input);
+			things[j] = thing;
+		}
 		scan.close();
+		
+		for(int k=4; k<THING_COUNT; k++)
+		{
+			things[k] = creatures[k-4];
+		}
+
 		
 		System.out.println("\nThings:\n");
 		for (int k=0; k < THING_COUNT; k++)
@@ -96,6 +98,23 @@ public class TestCreature extends Object
 		for(int b =0; b < CREATURE_COUNT; b++)
 		{
 			System.out.println(creatures[b].creatureName);
+		}
+		
+		System.out.println("");
+		Random rand = new Random();
+		
+		for(int q=0; q <CREATURE_COUNT; q++)
+		{
+			creatures[q].move();
+			creatures[q].whatDidYouEat();
+			r = rand.nextInt(10) + 0;
+			creatures[q].eat(things[r]);
+			creatures[q].whatDidYouEat();
+			creatures[q].move();
+			r = rand.nextInt(10) + 0;
+			creatures[q].eat(creatures[r]);
+			creatures[q].whatDidYouEat();
+			System.out.println("");
 		}
 	}
 }

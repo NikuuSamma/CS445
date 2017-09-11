@@ -6,6 +6,9 @@ import homework.*;
 
 public class TestCreatureTest 
 {
-
-	
+	@Test
+	public void test()
+	{
+		
+	}
 }
