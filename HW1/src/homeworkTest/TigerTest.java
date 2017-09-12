@@ -14,7 +14,6 @@ import homework.Thing;
 
 public class TigerTest 
 {
-
 	private ByteArrayOutputStream println = new ByteArrayOutputStream();
 	private PrintStream oldSystemOut = System.out;
 	
@@ -42,21 +41,35 @@ public class TigerTest
 	@Test
 	public void testEat()
 	{
+		Thing[] testThings = new Thing[1];
+		Tiger testTiger = new Tiger("testTiger");
 		Thing testThing = new Thing("meat");
-		Tiger testAnt = new Tiger("testTiger");
-		testAnt.eat(testThing);
-		assertEquals(testAnt.eaten,true);
-		
+		testThings[0] = testThing;
+		testTiger.eat(testThings[0]);
+		assertEquals(testTiger.eaten,true);
 	}
 	
 	@Test
 	public void testWhatDidYouEat()
 	{
+		Thing[] testThings = new Thing[1];
 		Tiger testTiger = new Tiger("testTiger");
 		Thing testThing = new Thing("meat");
-		testTiger.eat(testThing);
+		testThings[0] = testThing;
+		testTiger.eat(testThings[0]);
 		testTiger.whatDidYouEat();
 		assertEquals(testTiger.ate,"meat");
+	}
+	
+	@Test
+	public void testWhatDidYouEatNothing()
+	{
+		Thing[] testThings = new Thing[1];
+		Tiger testTiger = new Tiger("testTiger");
+		Thing testThing = new Thing("meat");
+		testThings[0] = testThing;
+		testTiger.move();
+		assertEquals(testTiger.ate,null);
 	}
 }
 

@@ -9,8 +9,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import homework.Bat;
+//import homework.TestCreature;
 import homework.Thing;
+import homework.Tiger;
 
 public class BatTest {
 
@@ -49,28 +52,52 @@ public class BatTest {
 	@Test
 	public void testEat()
 	{
-		Thing testThing = new Thing("Tiger");
+		Thing[] testThings = new Thing[2];
+		Tiger testTiger = new Tiger("Tiger");
+		Thing testThing = new Thing("Apple");
+		testThings[0] = testTiger;
+		testThings[1]= testThing;
 		Bat testBat = new Bat("testBat");
-		testBat.eat(testThing);
+		testBat.eat(testThings[0]);
 		assertEquals(testBat.eaten,true);
 	}
 	
 	@Test
-	public void testCantEat()
+	public void testWontEat()
 	{
-		Thing testThing = new Thing("blood");
+		Thing[] testThings = new Thing[2];
+		Tiger testTiger = new Tiger("Tiger");
+		Thing testThing = new Thing("Apple");
+		testThings[0] = testTiger;
+		testThings[1]= testThing;
 		Bat testBat = new Bat("testBat");
-		testBat.eat(testThing);
+		testBat.eat(testThings[1]);
 		assertEquals(testBat.eaten,false);
+	}
+	
+	@Test
+	public void testWontEatSilent()
+	{
+		Thing[] testThings = new Thing[2];
+		Tiger testTiger = new Tiger("Tiger");
+		Thing testThing = new Thing("Apple");
+		//TestCreature testCreature = new TestCreature();
+		testThings[0] = testThing;
+		testThings[1]= testTiger;
+		//Bat testBat = new Bat("testBat");
+		//testBat.eat(testCreature);
+		assertEquals("...\n",println.toString());
 	}
 	
 	@Test
 	public void testWhatDidYouEat()
 	{
+		Thing[] testThings = new Thing[1];
 		Bat testBat = new Bat("testBat");
-		Thing testThing = new Thing("Tiger");
-		testBat.eat(testThing);
+		Tiger testTiger = new Tiger("Henry");
+		testThings[0] = testTiger;
+		testBat.eat(testThings[0]);
 		testBat.whatDidYouEat();
-		assertEquals(testBat.ate,"Tiger");	
+		assertEquals(testBat.ate,testTiger.toString());	
 	}
 }

@@ -18,17 +18,17 @@ public class Bat extends Creature implements Flyer
 	
 	public void eat(Thing aThing)
 	{
-		String creature =  aThing.toString();
+		String creature =  aThing.getClass().getSimpleName();
 
-		if (creature.equals("Creature") || creature.equals("Tiger") || creature.equals("Bat") || creature.equals("Ant") ||creature.equals("Fly"))
+		if (creature.equals("Tiger") || creature.equals("Fly") || creature.equals("Bat") || creature.equals("Ant"))
 		{
-			System.out.println(batName + " has just eaten a(n) " + aThing.thingName);
+			System.out.println(batName.toString() + " has just eaten a(n) " + aThing.toString());
 			eaten = true;
-			ate = aThing.thingName;
+			ate = aThing.toString();
 		}
 		else if(creature.equals("Thing"))
 		{
-			System.out.println(batName + " won't eat a(n) " + aThing.thingName);
+			System.out.println(batName.toString() + " won't eat a(n) " + aThing.toString());
 			eaten = false;
 		}
 		else
@@ -45,6 +45,6 @@ public class Bat extends Creature implements Flyer
 	
 	public void fly()
 	{
-		System.out.println(batName + " " + getClass().getSimpleName() + " is swooping through the dark.");
+		System.out.println(batName.toString() + " " + getClass().getSimpleName() + " is swooping through the dark.");
 	}
 }

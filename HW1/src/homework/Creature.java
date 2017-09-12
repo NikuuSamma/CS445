@@ -29,11 +29,11 @@ public abstract class Creature extends Thing
 	{
 		if(eaten == false)
 		{
-			System.out.println(this.creatureName + " has had nothing to eat!");
+			System.out.println(this.creatureName + " " + getClass().getSimpleName() + " has had nothing to eat!");
 		}
 		else if(eaten == true)
 		{
-			System.out.println(this.creatureName + " has eaten " + ate);
+			System.out.println(this.creatureName + " " + getClass().getSimpleName() + " has eaten " + ate);
 		}
 	}
 	

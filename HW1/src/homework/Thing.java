@@ -17,6 +17,7 @@ public class Thing extends Object
 	public String toString()
 	{
 		 String className = getClass().getSimpleName();
+		 
 		if(className.equals("Thing"))
 		{
 			return thingName;
@@ -25,6 +26,5 @@ public class Thing extends Object
 		{
 			 return thingName + " " + className;
 		}
-		
 	}
 }

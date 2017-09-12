@@ -9,7 +9,7 @@ public class Ant extends Creature
 		super();
 		this.antName = "Ant"; 
 	}
-	
+
 	public Ant(String name)
 	{
 		super(name);
@@ -18,6 +18,6 @@ public class Ant extends Creature
 	
 	public void move()
 	{	
-		System.out.println(antName + " " + getClass().getSimpleName() + " is crawling around.");
+		System.out.println(antName.toString() + " " + getClass().getSimpleName() + " is crawling around.");
 	}
 }

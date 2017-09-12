@@ -9,7 +9,7 @@ public class Fly extends Creature implements Flyer
 		super();
 		this.flyName = "Fly"; 
 	}
-	
+
 	public Fly(String name)
 	{
 		super(name);
@@ -18,18 +18,18 @@ public class Fly extends Creature implements Flyer
 	
 	public void eat(Thing aThing)
 	{
-		String creature =  aThing.toString();
-
-		if (creature.equals("Creature") || creature.equals("Tiger") || creature.equals("Bat") || creature.equals("Ant") || creature.equals("Fly"))
+		String creature =  aThing.getClass().getSimpleName();
+		
+		if (creature.equals("Tiger") || creature.equals("Fly") || creature.equals("Bat") || creature.equals("Ant"))
 		{
-			System.out.println(flyName + " won't eat a(n) " + aThing.thingName);
+			System.out.println(flyName.toString() + " won't eat a(n) " + aThing.toString());
 			eaten = false;
 		}
 		else
 		{
-			System.out.println(flyName + " has just eaten a(n) " + aThing.thingName);
+			System.out.println(flyName.toString() + " has just eaten a(n) " + aThing.toString());
 			eaten = true;
-			ate = aThing.thingName;
+			ate = aThing.toString();;
 		}
 	}
 	
@@ -40,6 +40,6 @@ public class Fly extends Creature implements Flyer
 	
 	public void fly()
 	{
-		System.out.println(flyName + " " + getClass().getSimpleName() + " is buzzing around in flight.");
+		System.out.println(flyName.toString() + " " + getClass().getSimpleName() + " is buzzing around in flight.");
 	}
 }

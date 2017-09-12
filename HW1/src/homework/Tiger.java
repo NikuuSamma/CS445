@@ -17,6 +17,6 @@ public class Tiger extends Creature
 	}
 	public void move()
 	{
-		System.out.println(tigerName + " " + getClass().getSimpleName() + " has just pounced.");
+		System.out.println(tigerName.toString() + " " + getClass().getSimpleName() + " has just pounced.");
 	}
 }

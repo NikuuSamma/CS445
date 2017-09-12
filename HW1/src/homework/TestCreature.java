@@ -112,7 +112,7 @@ public class TestCreature extends Object
 			creatures[q].whatDidYouEat();
 			creatures[q].move();
 			r = rand.nextInt(10) + 0;
-			creatures[q].eat(creatures[r]);
+			creatures[q].eat(things[r]);
 			creatures[q].whatDidYouEat();
 			System.out.println("");
 		}
