@@ -8,8 +8,6 @@ public class TestCreature extends Object
 	public static final int CREATURE_COUNT = 6; //number of creatures to create
 	public static final int THING_COUNT = 10; //number of things to create
 	
-	public TestCreature(){};
-	
 	public static void main(String args[])
 	{
 		Scanner scan = new Scanner(System.in);
