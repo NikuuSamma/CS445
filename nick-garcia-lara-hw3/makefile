@@ -16,7 +16,7 @@ CLASSES = \
        tests/PushDownButtonTest.java \
        tests/TestRunner.java 
 
-default: classes run
+default: classes
 
 classes: $(CLASSES:.java=.class)
 
@@ -25,4 +25,8 @@ run:
 test:
 		$(JE) tests/TestRunner
 clean:
-		$(RM) *.class
+		$(RM) bulb/*.class
+		$(RM) implementation/*.class
+		$(RM) buttons/*.class
+		$(RM) lamp/*.class
+		$(RM) tests/*.class
