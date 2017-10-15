@@ -4,7 +4,6 @@ import bulb.LightBulb;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
 public class LightBulbTest 
 {
 	public class LampImplementation extends LightBulb 

@@ -1,9 +1,7 @@
 package tests;
 
 import buttons.Button;
-
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class ButtonTest 
@@ -98,7 +96,5 @@ public class ButtonTest
         
         System.out.println("-------------------------------------------------");
         System.out.println("Test switchOff() method when the switch is already set to off: END\n");
-    }
-    
+    }   
 }
-

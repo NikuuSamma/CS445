@@ -6,8 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PushDownButtonTest 
-{    
-	
+{   
 	public class LampImplementation extends LightBulb 
 	{
 		
@@ -43,4 +42,3 @@ public class PushDownButtonTest
         System.out.println("Test pushButton() while lightbulb is off: END\n");
     }    
 }
-
