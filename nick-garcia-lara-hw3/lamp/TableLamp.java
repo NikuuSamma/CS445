@@ -6,7 +6,7 @@ public class TableLamp
 {       
     public static void main(String[] args)
     {
-        System.out.println("Parts 1 and 2");
+        System.out.println("\nParts 1 and 2");
         System.out.println("----------------------------");
         Button b = new Button();
         b.switchOn();
@@ -17,6 +17,6 @@ public class TableLamp
         PushDownButton pb = new PushDownButton();
         pb.pushButton();
         pb.pushButton();
-        System.out.println("\nDid not have to rebuild LightBulb when Button was replaced.");  
+        System.out.println("\nDid not have to rebuild LightBulb when Button was replaced.\n");  
     }
 }

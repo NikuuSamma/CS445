@@ -1,4 +1,4 @@
-package test;
+package tests;
 
 import bulb.LightBulb;
 import static org.junit.Assert.*;
