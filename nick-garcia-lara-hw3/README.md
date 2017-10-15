@@ -3,8 +3,8 @@
 The makefile for my program is located in this folder along with all the source and test packages that contian the program and test files themselves.
 
 ## Configuration Instructions
-openjdk version "1.8.0_131"
-JUNIT-4.12.jdk
+1. openjdk version "1.8.0_131"
+2. JUNIT-4.12.jdk
 
 ## Build and deploy instructions
 Below are the instructions on how to compile and run my code, including the test cases.
@@ -14,13 +14,13 @@ Below are the instructions on how to compile and run my code, including the test
 
 ### To Run the program:
 1. Run the command "make run"
-  1. This will run the main class of the program (TableLamp)
+	1. This will run the main class of the program (TableLamp)
 
 #### This will automatically print out the results for:
 1. Parts 1 and 2 
-  1. Creating a button and switching it on then off
+	1. Creating a button and switching it on then off
 2. Part 3 
-  1. Creating a pushdown button and setting it to on then off.
+	1. Creating a pushdown button and setting it to on then off.
 
 ### To run the JUnit tests 
 1. Run "make test" in the command line
@@ -32,13 +32,13 @@ This will run the class testRunner which runs the tests:
 
 This displays whether or not the tests passed or not. This will be useful if you would like to alter my code in any way as it will let you know if the new code broke the current code.
 
-###To clean the code
+### To clean the code
 1. Run the command "make clean"
 
-###Known Bugs
+### Known Bugs
 There are currently no known bugs
 
-###Credits and acknowledgements
+### Credits and acknowledgements
 Coded by Nick Garcia Lara
 
 
