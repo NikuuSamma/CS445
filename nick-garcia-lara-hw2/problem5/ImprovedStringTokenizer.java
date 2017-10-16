@@ -4,7 +4,6 @@ import java.util.StringTokenizer;
 
 public class ImprovedStringTokenizer extends StringTokenizer
 {
-	
 	public ImprovedStringTokenizer(String str)
 	{
 		super(str);
@@ -14,8 +13,7 @@ public class ImprovedStringTokenizer extends StringTokenizer
 	{
 		super(strInput,split);
 	}
-
-
+	
 	public String [] returnWordsIntoArray(String input, String split)
 	{
 		ImprovedStringTokenizer striToken=new ImprovedStringTokenizer(input,split);

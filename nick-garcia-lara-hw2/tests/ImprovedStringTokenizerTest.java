@@ -10,7 +10,6 @@ import problem5.ImprovedStringTokenizer;
 
 public class ImprovedStringTokenizerTest 
 {
-	
 	private ByteArrayOutputStream println = new ByteArrayOutputStream();
 	private PrintStream oldSystemOut = System.out;
 	
@@ -38,5 +37,4 @@ public class ImprovedStringTokenizerTest
         assertEquals("is",words[2]);
         assertEquals("easy",words[3]);
     }
-
 }
